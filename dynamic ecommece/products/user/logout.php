@@ -111,10 +111,10 @@
     $fetch=mysqli_fetch_assoc($run);
 
     if($fetch && $fetch['role'] === "admin"){
-      header('location:products/dashboard.php');  
+      header('location:../products/dashboard.php');  
       exit();
     }elseif($fetch && $fetch["role"] === "user"){
-      header('location:website/home.php');
+      header('location:../website/index.html');
       exit();
     }else{
       echo"<script>alert('No user found');</script>";

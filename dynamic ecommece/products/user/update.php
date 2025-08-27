@@ -1,5 +1,5 @@
 <?php
-include "../connect.php";
+include "connect.php";
 
 $id = $_POST['id'];       // matches the hidden input name
 $email = $_POST['email'];

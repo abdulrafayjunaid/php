@@ -1,5 +1,5 @@
 <?php 
-include "../connect.php";
+include "connect.php";
 
 $id = $_GET['ID'];
 $sql1 = "SELECT * FROM users WHERE ID='$id'";
@@ -15,10 +15,10 @@ $fetch1 = mysqli_fetch_assoc($run1);
 </head>
 <body>
     <form action="update.php" method="post">
-        <input type="hidden" name="id" value="<?php echo $fetch1['ID']; ?>">
+        <input type="hidden" name="id" value="<?php echo $fetch1['id']; ?>">
 
         <label>ID</label>
-        <input type="number" value="<?php echo $fetch1['ID']; ?>" disabled><br><br>
+        <input type="number" value="<?php echo $fetch1['id']; ?>" disabled><br><br>
 
         <label>Email</label>
         <input type="email" name="email" value="<?php echo $fetch1['email']; ?>"><br><br>
